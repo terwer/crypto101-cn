@@ -95,7 +95,7 @@ const config = {
           },
           { to: '/blog', label: '更新记录', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/terwer/crypto101-cn',
             label: 'GitHub',
             position: 'right',
           },
@@ -103,43 +103,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: '书籍',
-            items: [
-              {
-                label: '阅读本书',
-                to: '/docs/preface',
-              },
-            ],
-          },
-          {
-            title: '社区',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/encryption',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/youweitang',
-              },
-            ],
-          },
-          {
-            title: '更多',
-            items: [
-              {
-                label: '更新记录',
-                to: '/blog',
-              },
-              {
-                label: '书籍源码',
-                href: 'https://github.com/terwer/crypto101-cn',
-              },
-            ],
-          },
-        ],
+        links: [],
         copyright: `Copyright © ${new Date().getFullYear()} crypto101, Inc. Translated by terwer. Built with Docusaurus.`,
       },
       prism: {
