@@ -46,4 +46,8 @@ $ GIT_USER=<Your GitHub username> pnpm deploy
 
 https://docusaurus.io/docs/markdown-features/math-equations
 
+### 提示
+
+https://docusaurus.io/docs/markdown-features/admonitions
+
 如果您使用 GitHub Pages 进行托管，这个命令是构建网站并推送到 `gh-pages` 分支的方便方式。
