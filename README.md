@@ -2,44 +2,48 @@
 
 欢迎阅读《密码学101》中文版，本书由 terwer 翻译。原文地址：https://www.crypto101.io/ 。
 
-## 初始化
+这个网站是使用 [Docusaurus 3](https://docusaurus.io/) 构建的，它是一个现代静态网站生成器。
+
+### 安装
 
 ```
-## 初始化 virtualenv
-python3 -m pip install --user --upgrade pip
-python3 -m pip --version
-
-python3 -m pip install --user virtualenv
-python3 -m venv venv
-
-## 或者
-curl https://pyenv.run | bash
-# 然后设置换变量 https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
-pyenv install 3.11.4
-pyenv global 3.11.4
-python -V
-python -m pip install --user virtualenv
-python -m venv venv
-
-source venv/bin/activate
-deactivate
-
-## 安装依赖
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple sphinx
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple myst-parser
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple sphinx_rtd_theme
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple sphinx-rtd-size
-
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-pip freeze > requirements.txt
+pnpm install
 ```
 
-## 项目构建
+### 本地开发
 
 ```
-rm -rf build && make html
+pnpm start
 ```
 
-## 参考
+此命令启动一个本地开发服务器并打开浏览器窗口。大多数更改都会实时反映，无需重新启动服务器。
 
-https://blog.terwer.space/s/20230725134910-epk1oj8
+### 构建
+
+```
+pnpm build
+```
+
+此命令将静态内容生成到 `build` 目录，并可使用任何静态内容托管服务进行提供。
+
+### 部署
+
+使用 SSH：
+
+```
+$ USE_SSH=true pnpm deploy
+```
+
+不使用 SSH：
+
+```
+$ GIT_USER=<Your GitHub username> pnpm deploy
+```
+
+## 使用插件
+
+### 数学公式
+
+https://docusaurus.io/docs/markdown-features/math-equations
+
+如果您使用 GitHub Pages 进行托管，这个命令是构建网站并推送到 `gh-pages` 分支的方便方式。
